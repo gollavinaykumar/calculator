@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        let count = 0;
+
+        const root = document.getElementById("root");
+
+        const box = document.createElement("div");
+        box.classList.add("box1");
+        root.appendChild(box);
+
+        const name = document.createElement("h1");
+        name.style.color = "white";
+        name.innerHTML = "Calculater";
+        box.appendChild(name);
+
+
+        const displayElement = document.createElement("p");
+        displayElement.classList.add("result");
+        displayElement.innerHTML = count;
+        box.appendChild(displayElement);
+
+
+
+        const box1 = document.createElement("div");
+        box1.classList.add("box2");
+        box.appendChild(box1);
+
+        const seven = document.createElement("button");
+        seven.innerHTML = "7";
+        seven.addEventListener("click", results)
+        box1.appendChild(seven);
+
+        const eight = document.createElement("button");
+        eight.innerHTML = "8";
+        box1.appendChild(eight);
+        eight.addEventListener("click", results)
+
+        const nine = document.createElement("button");
+        nine.innerHTML = "9";
+        box1.appendChild(nine);
+        nine.addEventListener("click", results)
+
+        const divide = document.createElement("button");
+        divide.innerHTML = "/";
+        box1.appendChild(divide);
+        divide.addEventListener("click", results)
+
+        const break1 = document.createElement("br");
+        box1.appendChild(break1);
+
+        const four = document.createElement("button");
+        four.innerHTML = "4";
+        box1.appendChild(four);
+        four.addEventListener("click", results)
+
+        const five = document.createElement("button");
+        five.innerHTML = "5";
+        box1.appendChild(five);
+        five.addEventListener("click", results)
+
+        const six = document.createElement("button");
+        six.innerHTML = "6";
+        box1.appendChild(six);
+        six.addEventListener("click", results)
+
+        const multiply = document.createElement("button");
+        multiply.innerHTML = "*";
+        box1.appendChild(multiply);
+        multiply.addEventListener("click", results)
+
+        const break2 = document.createElement("br");
+        box1.appendChild(break2);
+
+        const one = document.createElement("button");
+        one.innerHTML = "1";
+        box1.appendChild(one);
+        one.addEventListener("click", results)
+
+        const two = document.createElement("button");
+        two.innerHTML = "2";
+        box1.appendChild(two);
+        two.addEventListener("click", results)
+
+        const three = document.createElement("button");
+        three.innerHTML = "3";
+        box1.appendChild(three);
+        three.addEventListener("click", results)
+
+        const subtract = document.createElement("button");
+        subtract.innerHTML = "-";
+        box1.appendChild(subtract);
+        subtract.addEventListener("click", results)
+
+
+        const break3 = document.createElement("br");
+        box1.appendChild(break3);
+
+        const zero = document.createElement("button");
+        zero.innerHTML = "0";
+        box1.appendChild(zero);
+        zero.addEventListener("click", results)
+
+        const dot = document.createElement("button");
+        dot.innerHTML = ".";
+        box1.appendChild(dot);
+        dot.addEventListener("click", results)
+
+        const addition = document.createElement("button");
+        addition.innerHTML = "+";
+        box1.appendChild(addition);
+        addition.addEventListener("click", results)
+
+        const equal = document.createElement("button");
+        equal.innerHTML = "=";
+        equal.style.backgroundColor = "orange";
+        equal.style.color = "white";
+        box1.appendChild(equal);
+        equal.addEventListener("click", () => {
+            let sum1 = displayElement.innerHTML;
+            let result1 = 0;
+            result1 = eval(sum1);
+            displayElement.innerHTML = result1;
+        })
+        function results(event) {
+            if (displayElement.innerHTML == 0) {
+                count = event.target.innerHTML;
+                displayElement.innerHTML = count;
+            }
+            else {
+                count = event.target.innerHTML;
+                displayElement.innerHTML += count;
+            }
+        }
+    </script>
+</body>
+
+</html>

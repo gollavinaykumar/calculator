@@ -1,0 +1,27 @@
+.box1 {
+    border: 1px solid black;
+    padding: 32px;
+    width: fit-content;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgba(5, 0, 0, 0.684);
+}
+
+.result {
+    border: 1px solid black;
+    text-align: end;
+    padding: 25px;
+    font-size: xx-large;
+    border-radius: 10px;
+    background-color: lightgray;
+}
+button{
+    padding: 32px;
+    width: 15px;
+    margin: 16px;
+    height: 10px;
+    font-size: x-large;
+}
+body{
+    text-align: center;
+}
